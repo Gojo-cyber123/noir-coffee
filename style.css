@@ -229,10 +229,20 @@ body {
     margin-bottom: 20px;
 }
 
-.about h2,
+.about h2 {
+    color: #F4EBDD;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+
 .contact h2 {
-   line-height: 1.25;
     color: #38251D;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.25;
+    margin-bottom: 22px;
 }
 
 .about-content > p:last-child,
@@ -378,5 +388,66 @@ body {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+/* ФОРМА ОБРАТНОЙ СВЯЗИ */
+.contact-form {
+    max-width: 550px;
+    margin: 35px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid #DDCBB7;
+    background: #FFF9F0;
+    color: #38251D;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 17px;
+    border: none;
+    background: #38251D;
+    color: #F4EBDD;
+    font-family: inherit;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #A66B42;
+}
+
+#formMessage {
+    color: #806F62;
+    font-size: 13px;
+}
+
+.demo-note {
+    margin: 22px auto 0;
+    color: #806F62;
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }
